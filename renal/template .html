@@ -1,58 +1,69 @@
 <html>
-    <head>
-        
-    </head>
-    <link rel="stylesheet" href="https://use.typekit.net/ivm5eks.css">
-    <style>
-    body {
-        font-family: adobe-garamond-pro;
-        font-size: 14pt;
-    }
-    </style>
 
-    <body>
-            <form id="question">
-        <fieldset>
-            <legend>A 56 year old woman presents to your office with complaints of blood in her urine for the last one week. She also complains of back pain on the right side and burning urination. She has not been eating well for the last one month and has also lost some weight. You order routine lab tests and a CT scan suspecting cancer. CT scan shows an enlarged right kidney with multiple low density areas and a staghorn calculus. A biopsy of the lesions reveals lipid laden macrophages, lymphocytes, plasma cells and a few multinucleated cells. What is your diagnosis?</legend>
-            <label font-size:114pt><input type="radio" name="q1" value="A"> A) Renal cell carcinoma</label><br>
-            <label font-size:14pt><input type="radio" name="q1" value="B"> B) Angiomyolipoma</label><br>
-            <label font-size:14pt><input type="radio" name="q1" value="C"> C) Xanthogranulomaotus pyelonephritis</label><br>
-            <label font-size:14pt><input type="radio" name="q1" value="D"> D) Multiple renal cysts</label><br>
-            <label font-size:14pt><input type="radio" name="q1" value="E"> E) Autosomal dominant polycystic kidney disease</label><br>
-            <label font-size:14pt><input type="radio" name="q1" value="F"> F) Tuberculous pyelonephritis</label><br><br>
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
-    <div id="answer"></div>
+<head>
 
-    <script>
-    document.getElementById('question').onsubmit = function(event) {
-    event.preventDefault();
-    let answers = {q1: "C"};
-    let messages = [];
-    let flag = 0;
-    let q1 = document.querySelector('input[name="q1"]:checked');
-    if(q1) {
-        if(q1.value === answers.q1) {
-            messages.push("Correct!");
-            flag = 1;
+</head>
+<link rel="stylesheet" href="https://use.typekit.net/ivm5eks.css">
+<style>
+  body {
+    font-family: adobe-garamond-pro;
+    font-size: 14pt;
+  }
+
+  label {
+    font-family: adobe-garamond-pro;
+    font-size: 14pt;
+</style>
+
+<body>
+  <form id="question">
+    <fieldset>
+      <legend>A 56 year old woman presents to your office with complaints of blood in her urine for the last one week.
+        She also complains of back pain on the right side and burning urination. She has not been eating well for the
+        last one month and has also lost some weight. You order routine lab tests and a CT scan suspecting cancer. CT
+        scan shows an enlarged right kidney with multiple low density areas and a staghorn calculus. A biopsy of the
+        lesions reveals lipid laden macrophages, lymphocytes, plasma cells and a few multinucleated cells. What is your
+        diagnosis?</legend>
+      <label font-size:114pt><input type="radio" name="q1" value="A"> A) Renal cell carcinoma</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="B"> B) Angiomyolipoma</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="C"> C) Xanthogranulomaotus pyelonephritis</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="D"> D) Multiple renal cysts</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="E"> E) Autosomal dominant polycystic kidney
+        disease</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="F"> F) Tuberculous pyelonephritis</label><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+  <div id="answer"></div>
+
+  <script>
+    document.getElementById('question').onsubmit = function (event) {
+      event.preventDefault();
+      let answers = { q1: "C" };
+      let messages = [];
+      let flag = 0;
+      let q1 = document.querySelector('input[name="q1"]:checked');
+      if (q1) {
+        if (q1.value === answers.q1) {
+          messages.push("Correct!");
+          flag = 1;
         } else {
-            messages.push("Incorrect. Correct answer is Xanthogranulomaotus pyelonephritis.");
-            flag = 1;
+          messages.push("Incorrect. Correct answer is Xanthogranulomaotus pyelonephritis.");
+          flag = 1;
         }
-    } else {
+      } else {
         messages.push("No answer selected.");
         flag = 1;
-    }
-    document.getElementById('answer').innerHTML = messages.join("<br>");
-    
-    if(flag === 1) {
+      }
+      document.getElementById('answer').innerHTML = messages.join("<br>");
+
+      if (flag === 1) {
         document.getElementById('explanation').style.display = 'block';
-    }
+      }
     };
 
-    </script>
-    <div id="explanation" style="display:none;"">
+  </script>
+  <div id="explanation" style="display:none;"">
 
         <h1> Xanthogranulomaotus Pyelonephritis</h1>
         Xanthogranulomatous pyelonephritis is a rare, chronic, and destructive form of pyelonephritis characterized by granulomatous inflammation and accumulation of lipid-laden macrophages, typically associated with long-standing urinary tract obstruction or infection. The kidney is usually enlarged and it may resemble a tumor. <br>
@@ -81,34 +92,38 @@
       Bolger MP, Hennebry J, Byrne C, et al. 
       <i>Xanthogranulomatous Pyelonephritis: A Narrative Review with Current Perspectives on Diagnostic Imaging and Management, Including Interventional Radiology Techniques.</i> 
       <i>International Journal of Nephrology and Renovascular Disease.</i> 2021;Volume 14:359-369.
-      doi: <a href="https://doi.org/10.2147/ijnrd.s236552">https://doi.org/10.2147/ijnrd.s236552</a>
+      doi: <a href=" https://doi.org/10.2147/ijnrd.s236552">https://doi.org/10.2147/ijnrd.s236552</a>
     </li>
     <li>
-      Jha SK, Leslie SW, Aeddula NR. 
-      <i>Xanthogranulomatous Pyelonephritis.</i> 
+      Jha SK, Leslie SW, Aeddula NR.
+      <i>Xanthogranulomatous Pyelonephritis.</i>
       <i>StatPearls.</i> Published online June 2024.
       <a href="https://pubmed.ncbi.nlm.nih.gov/32491331/">https://pubmed.ncbi.nlm.nih.gov/32491331/</a>
     </li>
     <li>
-      Gaillard F. 
-      <i>Xanthogranulomatous pyelonephritis | Radiology Reference Article | Radiopaedia.org.</i> 
+      Gaillard F.
+      <i>Xanthogranulomatous pyelonephritis | Radiology Reference Article | Radiopaedia.org.</i>
       <i>Radiopaedia.</i>
-      <a href="https://radiopaedia.org/articles/xanthogranulomatous-pyelonephritis?lang=us">https://radiopaedia.org/articles/xanthogranulomatous-pyelonephritis?lang=us</a>
+      <a
+        href="https://radiopaedia.org/articles/xanthogranulomatous-pyelonephritis?lang=us">https://radiopaedia.org/articles/xanthogranulomatous-pyelonephritis?lang=us</a>
     </li>
     <li>
       <i>UpToDate.</i> Uptodate.com. Published 2025.
-      <a href="https://www.uptodate.com/contents/xanthogranulomatous-pyelonephritis">https://www.uptodate.com/contents/xanthogranulomatous-pyelonephritis</a>
+      <a
+        href="https://www.uptodate.com/contents/xanthogranulomatous-pyelonephritis">https://www.uptodate.com/contents/xanthogranulomatous-pyelonephritis</a>
     </li>
     <li>
-      Loscalzo J, Fauci AS, Kasper DL, Hauser S, Longo D, Jameson JL. 
-      <i>Harrison’s Principles of Internal Medicine, Twenty-Second Edition (Vol.1 &amp; Vol.2).</i> 
+      Loscalzo J, Fauci AS, Kasper DL, Hauser S, Longo D, Jameson JL.
+      <i>Harrison’s Principles of Internal Medicine, Twenty-Second Edition (Vol.1 &amp; Vol.2).</i>
       McGraw Hill Professional; 2025.
     </li>
     <li>
       <i>Xanthogranulomatous pyelonephritis.</i> www.pathologyoutlines.com.
-      <a href="https://www.pathologyoutlines.com/topic/kidneyxantho.html">https://www.pathologyoutlines.com/topic/kidneyxantho.html</a>
+      <a
+        href="https://www.pathologyoutlines.com/topic/kidneyxantho.html">https://www.pathologyoutlines.com/topic/kidneyxantho.html</a>
     </li>
-  </ol>
-    </div>    
-    </body>
+    </ol>
+  </div>
+</body>
+
 </html>
