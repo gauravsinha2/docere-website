@@ -1,0 +1,139 @@
+<html>
+
+<head>
+
+</head>
+<link rel="stylesheet" href="https://use.typekit.net/ivm5eks.css">
+<style>
+  body {
+    font-family: adobe-garamond-pro;
+    font-size: 14pt;
+  }
+</style>
+
+<body>
+  <form id="question">
+    <fieldset>
+      <legend>A 48‑year‑old man presents to the emergency department with a 4‑day history of right flank pain and fever
+        (38.9 °C). He reports a recent cystoscopic removal of a 1.5‑cm ureteral stone. His past medical history is
+        significant for type 2 diabetes mellitus poorly controlled on metformin. On examination, he has tenderness over
+        the right costovertebral angle but no palpable mass. Laboratory studies show leukocytosis (WBC = 18,500/µL) with
+        a left shift and an elevated C‑reactive protein of 12 mg/dL. A contrast‑enhanced CT scan of the abdomen reveals
+        a 5‑cm rim‑enhancing fluid collection adjacent to the right kidney with mild gas formation within the capsule.
+        <br>
+        Which of the following is the most appropriate next step in management?
+      </legend>
+      <label font-size:14pt><input type="radio" name="q1" value="A"> A) Initiate broad‑spectrum intravenous antibiotics
+        and observe for clinical improvement</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="B"> B) Perform an ultrasound‑guided percutaneous
+        drainage of the abscess</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="C"> C) Schedule a nephrectomy with excision of the
+        affected kidney</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="D"> D) Administer a single dose of intramuscular
+        ceftriaxone followed by oral amoxicillin–clavulanate</label><br>
+      <label font-size:14pt><input type="radio" name="q1" value="E"> E) Place a double‑J ureteral stent to relieve
+        potential obstruction and repeat imaging in 2 weeks</label><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+  <div id="answer"></div>
+
+  <script>
+    document.getElementById('question').onsubmit = function (event) {
+      event.preventDefault();
+      let answers = { q1: "B" };
+      let messages = [];
+      let flag = 0;
+      let q1 = document.querySelector('input[name="q1"]:checked');
+      if (q1) {
+        if (q1.value === answers.q1) {
+          messages.push("Correct!");
+          flag = 1;
+        } else {
+          messages.push("Incorrect. Correct answer is B- Perform an ultrasound‑guided percutaneous drainage of the abscess.");
+          flag = 1;
+        }
+      } else {
+        messages.push("No answer selected.");
+        flag = 1;
+      }
+      document.getElementById('answer').innerHTML = messages.join("<br>");
+
+      if (flag === 1) {
+        document.getElementById('explanation').style.display = 'block';
+      }
+    };
+
+  </script>
+  <div id="explanation" style="display:none;"">
+
+      <h2>Answer rationale</h2>  
+      The patient has a clinically significant perinephric abscess (>3 cm) with gas formation, indicating an anaerobic component. Prompt source control is essential; image‑guided percutaneous drainage is the first‑line intervention for accessible abscesses and should be combined with appropriate broad‑spectrum intravenous antibiotics (e.g., ceftriaxone + metronidazole). Observation alone or only antibiotic therapy without drainage would delay definitive treatment and increase risk of sepsis. Nephrectomy is reserved for failed drainage, multiloculated abscesses, or concurrent malignancy.
+      
+      <h1> Perinephric abscess</h1>
+        A perinephric abscess is a localized collection of purulent material that forms in the retroperitoneal space surrounding the kidney and renal fascia. It most often results from an untreated or inadequately treated acute pyelonephritis, obstruction by calculi, trauma, or iatrogenic injury (e.g., post‑nephrectomy or percutaneous procedures). The clinical picture can mimic a renal neoplasm on imaging, so awareness of its characteristic features and prompt intervention are essential to prevent sepsis and loss of renal function. <br>
+        <h3> Pathophysiology</h3>
+        <ul>
+          <li>Initiating Event: A urinary tract infection (UTI) that ascends from the lower urinary tract or an obstruction (e.g., staghorn calculus) creates a nidus for bacterial proliferation.</li>
+          <li>Bacterial Spread: The bacteria penetrate the renal parenchyma and spread through the perinephric fascia into the retroperitoneal space.</li>
+          <li>Inflammatory Response: Neutrophils, macrophages, lymphocytes, and plasma cells infiltrate, releasing proteases and cytokines that liquefy tissue and form a purulent cavity.</li>
+          <li>Abscess Formation: The collection becomes walled off by granulation tissue and fibrous capsule, trapping the pus and preventing further spread.</li>
+        <br>
+        <h3>Epidemiology</h3>
+        It is seen in women more than men. The typical age of presentation is around 45-55 years. Although less common, it can also be seen in children and the elderly where a gender predominance is not well established. <br>
+        <h3>Clinical presentation</h3>
+        It is almost always unilateral and generally presents as a chronic unilateral infection with non specific symptoms. The most commonly reported symptoms are flank pain, fever, malaise, lower urinary tract symptoms, anorexia and weight loss. Symptoms are generally present for long durations. Urine culture can isolate enterobacteria like <i>E. coli</i> and <i>Proteus mirabilis</i>. <br>
+        <h3>Imaging</h3>
+        A staghorn calculus may be seen. The kidneys are enlarged with dilated calyces and a multiloculated appearance (Bear&apos;s paw sign).<br>
+        <h3>Histopathology</h3>
+        Foamy macrophages with plasma cells, lymphocytes and giant cells are seen.<br>
+        <h3>Complications</h3>
+        It can involve nearby organs. It can also lead to secondary amyloidosis and nephrotic syndrome. <br>
+        <h3>Management</h3>
+        <ol>
+            <li>Antibiotics targeting common pathogens for the management of pyelonephritis (fluoroquinolone, ceftriaxone).</li>
+            <li>Surgical resection of the involved tissue (with total or partial nephrectomy) is the definitive treatment.</li>
+        </ol>
+
+        
+        <h3>References</h3>
+        <ol>
+    <li>
+      Bolger MP, Hennebry J, Byrne C, et al. 
+      <i>Xanthogranulomatous Pyelonephritis: A Narrative Review with Current Perspectives on Diagnostic Imaging and Management, Including Interventional Radiology Techniques.</i> 
+      <i>International Journal of Nephrology and Renovascular Disease.</i> 2021;Volume 14:359-369.
+      doi: <a href=" https://doi.org/10.2147/ijnrd.s236552">https://doi.org/10.2147/ijnrd.s236552</a>
+    </li>
+    <li>
+      Jha SK, Leslie SW, Aeddula NR.
+      <i>Xanthogranulomatous Pyelonephritis.</i>
+      <i>StatPearls.</i> Published online June 2024.
+      <a href="https://pubmed.ncbi.nlm.nih.gov/32491331/">https://pubmed.ncbi.nlm.nih.gov/32491331/</a>
+    </li>
+    <li>
+      Gaillard F.
+      <i>Xanthogranulomatous pyelonephritis | Radiology Reference Article | Radiopaedia.org.</i>
+      <i>Radiopaedia.</i>
+      <a
+        href="https://radiopaedia.org/articles/xanthogranulomatous-pyelonephritis?lang=us">https://radiopaedia.org/articles/xanthogranulomatous-pyelonephritis?lang=us</a>
+    </li>
+    <li>
+      <i>UpToDate.</i> Uptodate.com. Published 2025.
+      <a
+        href="https://www.uptodate.com/contents/xanthogranulomatous-pyelonephritis">https://www.uptodate.com/contents/xanthogranulomatous-pyelonephritis</a>
+    </li>
+    <li>
+      Loscalzo J, Fauci AS, Kasper DL, Hauser S, Longo D, Jameson JL.
+      <i>Harrison’s Principles of Internal Medicine, Twenty-Second Edition (Vol.1 &amp; Vol.2).</i>
+      McGraw Hill Professional; 2025.
+    </li>
+    <li>
+      <i>Xanthogranulomatous pyelonephritis.</i> www.pathologyoutlines.com.
+      <a
+        href="https://www.pathologyoutlines.com/topic/kidneyxantho.html">https://www.pathologyoutlines.com/topic/kidneyxantho.html</a>
+    </li>
+    </ol>
+  </div>
+</body>
+
+</html>
